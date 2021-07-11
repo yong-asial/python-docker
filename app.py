@@ -2,6 +2,7 @@ from flask import Flask
 import threading
 import sys
 import os
+import train as fib
 
 app = Flask(__name__)
 
@@ -14,6 +15,7 @@ def output(msg):
 
 def my_threaded_func(arg, arg2):
     output("Running thread! Args:")
+    fib.start()
     output("Thread Done!")
 
 
